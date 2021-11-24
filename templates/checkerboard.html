@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <title>Checkerboard Game</title> 
+       <style>
+           body{
+               background-color: lightskyblue;
+           }
+           h1 {
+               text-align: center;
+           }
+           .container {
+                text-align: center;
+           }
+
+           table{
+               text-align: center;
+           }
+
+           .color1 {
+			display: inline-block;
+			background-color: red;
+			border: 1px solid black;
+			margin: -2px;
+			width: 100px;
+			height: 100px;
+		}
+
+		.color2 {
+			display: inline-block;
+			background-color: black;
+			border: 1px solid black;
+			margin: -2px;
+			width: 100px;
+			height: 100px;
+		}
+        table {
+            display: inline-block;
+        }
+
+       </style>
+    </head>
+    <body>
+        <h1>Welcome to Checkerboard Game</h1>
+
+        <div class = "container">
+            <table>
+                {% for i in range(y): %}
+                <tr>
+                    {% for j in range(x): %}
+                    <td class="color{{(i+j)%2+1}}"></td>
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </body>
+</html>
